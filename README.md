@@ -20,13 +20,13 @@ Suivre le tuto, savoir expliquer sa demarche. Le but est de crée une chat qui p
 
 
 # Etape
-J'ai d'abord cree mon dossier travail save sur le git
-Ecrire le readme pour me souvenir des etape
-Puis commencer a installer les modules
-crée mon fichier app.js qui permet de me co port 3000
-Creaction d'un fichier html avec un formulaire envoie message
-Intallation de moogose qui permet d'interagir avec la base de donne mongodb
-Lien avec le bdd via mongoaltas
-Intallation du modul body parser qui permet de recup des donne du formulaire
-Ajout dans le html fonction pour enregistré les message et action envoie du formuliare
-Creation des route get  accéder au formulaire et afficher / post pour envoyer les message les donnée sont envoyer dans le schema sous forme de tableau
+J'ai d'abord cree mon dossier travail save sur le git<br>
+Ecrire le readme pour me souvenir des etape<br>
+Puis commencer a installer les modules<br>
+crée mon fichier app.js qui permet de me co port 3000<br>
+Creaction d'un fichier html avec un formulaire envoie message<br>
+Intallation de moogose qui permet d'interagir avec la base de donne mongodb<br>
+Lien avec le bdd via mongoaltas<br>
+Intallation du modul body parser qui permet de recup des donne du formulaire<br>
+Ajout dans le html fonction pour enregistré les message et action envoie du formuliare<br>
+Creation des route get  accéder au formulaire et afficher / post pour envoyer les message les donnée sont envoyer dans le schema sous forme de tableau<br>
