@@ -35,11 +35,7 @@ app.get('/messages', (req, res) => {
   })
 })
 
-app.get('/messages', (req, res) => {
-  Message.find({},(err, messages)=> {
-    res.send(messages);
-  })
-})
+
 
 app.post('/messages', (req, res) => {
   var message = new Message(req.body);
