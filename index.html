@@ -21,7 +21,7 @@
         <br>
         <input id = "name" class="form-control" placeholder="Pseudo">
         <br>
-        <textarea id = "message" class="form-control" placeholder="Your Message Here">
+        <textarea id = "message" class="form-control" placeholder="Votre message...">
         </textarea>
         <br>
         <button id="send" class="btn btn-success">Envoyer</button>
@@ -31,17 +31,14 @@
         </div>
     </div>
     
-<!-- <script>
- var socket = io();
 
-socket.on('message', addMessages);
-
-</script> -->
 
 
 
 <script>
+ var socket = io();
 
+socket.on('message', addMessages);
 
  $(() => {
     $("#send").click(()=>{

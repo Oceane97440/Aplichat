@@ -1,12 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser')
 var app = express();
-const MongoClient = require("mongodb").MongoClient;
-const ObjectId = require("mongodb").ObjectID;
 var mongoose = require('mongoose');
 
-// var http = require('http').Server(app);
-// var io = require('socket.io')(http);
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 
 
@@ -45,7 +43,7 @@ app.post('/messages', (req, res) => {
   message.save((err) =>{
     if(err)
       sendStatus(500);
-     // io.emit('message', req.body);
+     io.emit('message', req.body);
     res.sendStatus(200);
   })
 })
@@ -54,9 +52,9 @@ app.post('/messages', (req, res) => {
 
 
 //Connection avec la bibliothèque Socket.IO
-// io.on('connection', () =>{
-//   console.log("client connecter")
-//  })
+io.on('connection', () =>{
+  console.log("client connecter")
+ })
 
 
 
@@ -65,6 +63,6 @@ app.post('/messages', (req, res) => {
 
 
 //Connexion port 300
-var server = app.listen(3000, () => {
+var server = http.listen(3000, () => {
     console.log("server is running on port", server.address().port);
    });
