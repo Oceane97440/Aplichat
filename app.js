@@ -1,9 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser')
 var app = express();
-//var http = require('http').Server(app);
-//var io = require('socket.io')(http);
+const MongoClient = require("mongodb").MongoClient;
+const ObjectId = require("mongodb").ObjectID;
 var mongoose = require('mongoose');
+
+// var http = require('http').Server(app);
+// var io = require('socket.io')(http);
 
 
 
@@ -14,7 +17,7 @@ var Message = mongoose.model('Message',{
   })
 
 //Url bdd
-mongoose.connect("mongodb+srv://oceane08:password974@cluster0-owldh.mongodb.net/test?retryWrites=true&w=majority", 
+mongoose.connect("mongodb+srv://oceane08:password974@cluster0-owldh.mongodb.net/simple-chat?retryWrites=true&w=majority", 
 {useNewUrlParser: true},() =>
 
 console.log("BDD CONNECTER")
@@ -42,7 +45,7 @@ app.post('/messages', (req, res) => {
   message.save((err) =>{
     if(err)
       sendStatus(500);
-    io.emit('message', req.body);
+     // io.emit('message', req.body);
     res.sendStatus(200);
   })
 })
@@ -50,6 +53,10 @@ app.post('/messages', (req, res) => {
   
 
 
+//Connection avec la bibliothèque Socket.IO
+// io.on('connection', () =>{
+//   console.log("client connecter")
+//  })
 
 
 
